@@ -54,11 +54,24 @@
   text-transform: uppercase;
   color: var(--ink-soft);
 }
-
 .collage { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
 .collage__item:nth-child(3n + 2) { margin-top: var(--space-7); }
 .collage__item:nth-child(3n) { margin-top: var(--space-5); }
-.collage .tile { padding: var(--space-3); border-radius: var(--radius-m); }
+.collage .tile { 
+  padding: var(--space-3); 
+  border-radius: var(--radius-m); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  overflow: hidden;
+}
+.collage .tile img, 
+.pcard img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* যাতে পুরো ছবি সম্পূর্ণ দেখা যায় এবং কোনো পাশ কেটে না যায় */
+}
 
 /* ---------- About ---------- */
 .split {
